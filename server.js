@@ -14,3 +14,11 @@ server.listen(PORT, () => {
 server.get("/test", (request , response )=>{
     response.send("<h1>you are live</h1>")
 })
+
+server.get("/help",(request,response)=> {
+    let help = [
+        {"info": "hello"},
+        {"problem": "yes"}
+    ]
+    response.json(help)
+})
